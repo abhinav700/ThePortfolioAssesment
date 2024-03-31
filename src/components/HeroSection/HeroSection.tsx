@@ -9,26 +9,18 @@ const HeroSection = ({ about }: any) => {
   const [quote, setQuote] = useState(about?.quote);
   const [avatar, setAvatar] = useState(about?.avatar);
   const [title, setTitle] = useState(about.title);
-  let animationTime = 1000;
-  let animationSequence = [];
-  animationSequence.push(subTitle);
-  animationSequence.push(animationTime);
+  
 
-  for (let i = 0; i < description.length; i++) {
-    const trimmedDes = description[i].trim();
-    if (trimmedDes != "") animationSequence.push(trimmedDes);
-    else continue;
-    animationSequence.push(animationTime);
-  }
+
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
-        <h1 className="text-4xl lg:text-6xl  sm:mx-auto">
+        <h1 className="sm:text-4xl md:text-6xl  sm:mx-auto md:h-[150px] lg:h-[50px]">
           Hello, I am{" "}
           <span className="text-[#6b96b0]">
             <TypeAnimation
-              sequence={[`${name}`, 5000, `a ${title}`,5000]}
+              sequence={[`${name}`, 2000, `a ${title}`,2000]}
               wrapper="span"
               speed={55}
               omitDeletionAnimation={false}
@@ -36,24 +28,16 @@ const HeroSection = ({ about }: any) => {
             />
           </span>
         </h1>
-        <h2 className="text-2xl lg:text-4xl py-5 sm:mx-auto">
-          <TypeAnimation
-            sequence={animationSequence}
-            wrapper="span"
-            speed={75}
-            omitDeletionAnimation={true}
-            repeat={Infinity}
-          />
-        </h2>
-        <div className="flex flex-row mt-6">
-          <button className="mr-3 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+    
+        <div className="flex flex-row sm:mt-[5px] mt-[40px] lg:mt-[100px]">
+          <button className="mr-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Hire Me
           </button>
-          <button className="ml-3 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+          <button className="ml-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Download CV
           </button>
         </div>
-        <blockquote className="text-2xl text-lg font-medium italic text-gray-700 mx-auto mt-12 sm:self-">
+        <blockquote className="text-3xl mt-10 text-lg font-medium italic text-gray-700 mx-auto mt-12 sm:self-">
           {quote}
         </blockquote>
         <cite className="block mt-2 text-xl text-gray-500">- {name}</cite>
