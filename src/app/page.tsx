@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import { TailSpin } from "react-loader-spinner";
+import AboutMe from "@/components/AboutMe/AboutMe";
 const Home = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ const Home = () => {
       );
       setData(apiData.data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -23,28 +24,28 @@ const Home = () => {
     loadData();
   }, []);
 
-  return (
+    return (
     <>
-      {!loading  ? (
+      {!loading ? (
         <main className="flex min-h-screen flex-col ">
           <div className="container mx-auto px-7 py-5">
             <HeroSection about={data!.user!.about} />
+            <AboutMe about={data!.user!.about} socialHandles = {data!.user.social_handles}/>
           </div>
         </main>
-      ) : (<div className="flex flex-row justify-center items-center min-h-screen container">
-
-        <TailSpin
-          visible={true}
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="tail-spin-loading"
-          radius="1"
-          wrapperStyle={{}}
-          wrapperClass="mx-auto mx-auto"
-        />
-      </div>
-
+      ) : (
+        <div className="flex flex-row justify-center items-center min-h-screen container">
+          <TailSpin
+            visible={true}
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass="mx-auto mx-auto"
+          />
+        </div>
       )}
     </>
   );
