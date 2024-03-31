@@ -8,7 +8,7 @@ const HeroSection = ({ about }: any) => {
   const [subTitle, setSubTitle] = useState(about?.subTitle);
   const [quote, setQuote] = useState(about?.quote);
   const [avatar, setAvatar] = useState(about?.avatar);
-
+  const [title, setTitle] = useState(about.title);
   let animationTime = 1000;
   let animationSequence = [];
   animationSequence.push(subTitle);
@@ -25,7 +25,16 @@ const HeroSection = ({ about }: any) => {
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
         <h1 className="text-4xl lg:text-6xl  sm:mx-auto">
-          Hello, I am <span className="text-[#6b96b0]">{`${name}`}</span>
+          Hello, I am{" "}
+          <span className="text-[#6b96b0]">
+            <TypeAnimation
+              sequence={[`${name}`, 5000, `a ${title}`,5000]}
+              wrapper="span"
+              speed={55}
+              omitDeletionAnimation={false}
+              repeat={Infinity}
+            />
+          </span>
         </h1>
         <h2 className="text-2xl lg:text-4xl py-5 sm:mx-auto">
           <TypeAnimation
