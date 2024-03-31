@@ -21,8 +21,6 @@ const HeroSection = ({ about }: any) => {
     animationSequence.push(animationTime);
   }
 
-  console.log(animationSequence);
-  console.log(about);
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
