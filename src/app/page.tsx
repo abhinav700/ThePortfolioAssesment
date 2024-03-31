@@ -1,15 +1,23 @@
 "use client";
 
-import HeroSection from "@/components/HeroSection/HeroSection";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import HeroSection from "@/components/HeroSection/HeroSection";
+import { TailSpin } from "react-loader-spinner";
 const Home = () => {
   const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
   const loadData = async () => {
-    const apiData = await axios.get(
-      "https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae"
-    );
-    setData(apiData.data);
+    try {
+      const apiData = await axios.get(
+        "https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae"
+      );
+      setData(apiData.data);
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoading(false);
+    }
   };
   useEffect(() => {
     loadData();
@@ -17,14 +25,27 @@ const Home = () => {
 
   return (
     <>
-      {data ? (
+      {!loading  ? (
         <main className="flex min-h-screen flex-col ">
           <div className="container mx-auto px-7 py-5">
-
-          <HeroSection about={data!.user!.about} />
+            <HeroSection about={data!.user!.about} />
           </div>
         </main>
-      ) : "Loading"}
+      ) : (<div className="flex flex-row justify-center items-center min-h-screen container">
+
+        <TailSpin
+          visible={true}
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass="mx-auto mx-auto"
+        />
+      </div>
+
+      )}
     </>
   );
 };
