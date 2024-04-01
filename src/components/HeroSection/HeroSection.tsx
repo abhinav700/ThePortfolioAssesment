@@ -9,10 +9,7 @@ const HeroSection = ({ about }: any) => {
   const [quote, setQuote] = useState(about?.quote);
   const [avatar, setAvatar] = useState(about?.avatar);
   const [title, setTitle] = useState(about.title);
-  
-
-
-
+  console.log(about)
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
@@ -20,7 +17,7 @@ const HeroSection = ({ about }: any) => {
           Hello, I am{" "}
           <span className="text-[#6b96b0]">
             <TypeAnimation
-              sequence={[`${name}`, 2000, `a ${title}`,2000]}
+              sequence={[`${name}`, 2000, `a ${title}`, 2000]}
               wrapper="span"
               speed={55}
               omitDeletionAnimation={false}
@@ -28,7 +25,7 @@ const HeroSection = ({ about }: any) => {
             />
           </span>
         </h1>
-    
+
         <div className="flex flex-row sm:mt-[5px] mt-[40px] lg:mt-[100px]">
           <button className="mr-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Hire Me
@@ -51,6 +48,9 @@ const HeroSection = ({ about }: any) => {
             height={200}
             src={avatar.url}
           />
+          <h1 className="rounded-full bg-white text-black mt-3   lg:w-[500px] lg:text-5xl transform absolute -translate-x-1/2 translate-y-1/2  flex text-center left-1/2 top-3/4  ">
+            {about.exp_year}+ YEARS OF EXPERIENCE
+          </h1>
         </div>
       </div>
     </section>
