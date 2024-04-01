@@ -9,7 +9,6 @@ const HeroSection = ({ about }: any) => {
   const [quote, setQuote] = useState(about?.quote);
   const [avatar, setAvatar] = useState(about?.avatar);
   const [title, setTitle] = useState(about.title);
-  console.log(about)
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
@@ -27,10 +26,10 @@ const HeroSection = ({ about }: any) => {
         </h1>
 
         <div className="flex flex-row sm:mt-[5px] mt-[40px] lg:mt-[100px]">
-          <button className="mr-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+          <button className="text-white mr-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Hire Me
           </button>
-          <button className="ml-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+          <button className="text-white ml-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Download CV
           </button>
         </div>
