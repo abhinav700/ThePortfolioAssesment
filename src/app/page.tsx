@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import { TailSpin } from "react-loader-spinner";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import SkillsSection from "@/components/SkillsSection/SkillsSection";
+import ProjectSection from "@/components/ProjectSection/ProjectSection";
 const Home = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -24,14 +25,16 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, []);
+  // console.log(data);
     return (
     <>
       {!loading ? (
-        <main className="flex min-h-screen flex-col ">
+        <main className="flex min-h-screen flex-col bg-[#e3dfd1]">
           <div className="container mx-auto px-7 py-5">
             <HeroSection about={data!.user!.about} />
             <AboutMe about={data!.user!.about} socialHandles = {data!.user.social_handles}/>
             <SkillsSection skills = {data!.user!.skills}/>
+            <ProjectSection projects = {data!.user!.projects}/>
           </div>
         </main>
       ) : (
