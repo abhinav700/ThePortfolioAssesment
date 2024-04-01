@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AboutMe = ({ about, socialHandles }: any) => {
-    console.log(socialHandles)
   const [alternateAvatar, setAlternateAvatar] = useState(
     about.alternateAvatars[0].url
   );
@@ -26,7 +25,7 @@ const AboutMe = ({ about, socialHandles }: any) => {
       s += `${keyParts[i]} `;
     }
     return (
-      <h2 className="text-xl my-5 px-4 py-3" key={value}>
+      <h2 className="text-xl my-3 px-4 py-3" key={value}>
         <span className="font-bold">{s}: </span>
         <span>{value}</span>
       </h2>
