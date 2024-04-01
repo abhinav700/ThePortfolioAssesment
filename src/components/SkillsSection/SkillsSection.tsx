@@ -2,7 +2,6 @@ import React from "react";
 import SkillComponent from "./SkillComponent";
 
 const SkillsSection = ({ skills }: any) => {
-  console.log(skills);
   let mappedArray = skills.map((item: any) => {
     return <SkillComponent key={item._id} skill={item} />;
   });

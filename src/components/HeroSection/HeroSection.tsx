@@ -9,7 +9,6 @@ const HeroSection = ({ about }: any) => {
   const [quote, setQuote] = useState(about?.quote);
   const [avatar, setAvatar] = useState(about?.avatar);
   const [title, setTitle] = useState(about.title);
-  console.log(about)
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">

@@ -3,7 +3,6 @@ import Image from "next/image";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const SkillComponent = ({ skill }: any) => {
-  console.log(skill);
   return (
     <div className="mx-4 my-1 w-[200px] h-[450px]">
       <Image

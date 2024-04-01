@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ContactMe from "./ContactForm";
+import ContactForm from "./ContactForm";
 
 const AboutMe = ({ about, socialHandles }: any) => {
   const [alternateAvatar, setAlternateAvatar] = useState(
@@ -99,7 +99,7 @@ const AboutMe = ({ about, socialHandles }: any) => {
             )}
             {
               showContactMe && (
-                <ContactMe/>
+                <ContactForm/>
               )
             }
           </div>
