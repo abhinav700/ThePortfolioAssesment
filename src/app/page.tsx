@@ -5,6 +5,7 @@ import axios from "axios";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import { TailSpin } from "react-loader-spinner";
 import AboutMe from "@/components/AboutMe/AboutMe";
+import SkillsSection from "@/components/SkillsSection/SkillsSection";
 const Home = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,6 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, []);
-
     return (
     <>
       {!loading ? (
@@ -31,6 +31,7 @@ const Home = () => {
           <div className="container mx-auto px-7 py-5">
             <HeroSection about={data!.user!.about} />
             <AboutMe about={data!.user!.about} socialHandles = {data!.user.social_handles}/>
+            <SkillsSection skills = {data!.user!.skills}/>
           </div>
         </main>
       ) : (
