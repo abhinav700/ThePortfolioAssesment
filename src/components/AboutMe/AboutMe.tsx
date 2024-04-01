@@ -25,7 +25,7 @@ const AboutMe = ({ about, socialHandles }: any) => {
       s += `${keyParts[i]} `;
     }
     return (
-      <h2 className="text-xl my-3 px-4 py-3" key={value}>
+      <h2 className="text-xl my-3 px-4 py-3 text-black" key={value}>
         <span className="font-bold">{s}: </span>
         <span>{value}</span>
       </h2>
@@ -70,7 +70,7 @@ const AboutMe = ({ about, socialHandles }: any) => {
           </nav>
           <div>
             {showAboutMe && (
-              <div className="mt-7 h-[400px] text-xl">{description}</div>
+              <div className="text-black mt-7 h-[400px] text-xl">{description}</div>
             )}
 
             {showContactInformation && (
