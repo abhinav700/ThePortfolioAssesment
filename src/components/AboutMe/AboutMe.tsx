@@ -64,21 +64,21 @@ const AboutMe = ({ about, socialHandles }: any) => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src={alternateAvatar} className="lg:w-[400px] lg:h-[500px]" height={350} width={250} alt="" />
         <div>
-          <nav className="mt-12 lg:mt-8 mb-7">
+          <nav className="mt-12 lg:mt-8 mb-5">
             <button
-              className="mr-3 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
+              className="mr-3 mt-2 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
               onClick={handleClickAboutMe}
             >
               About Me
             </button>
             <button
-              className=" ml-3 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
+              className=" ml-3 mt-2 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
               onClick={handleClickContactInformation}
             >
               Contact information
             </button>
             <button
-              className=" ml-3 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
+              className="md:ml-3 mt-2 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]"
               onClick={handleClickContactMe}
             >
               Contact Me
