@@ -26,10 +26,10 @@ const HeroSection = ({ about }: any) => {
         </h1>
 
         <div className="flex flex-row sm:mt-[5px] mt-[40px] lg:mt-[20px]">
-          <button className="mr-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+          <button className="mr-3 text-white mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Hire Me
           </button>
-          <button className="ml-3 mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
+          <button className="ml-3 text-white mt-8 p-2 bg-[#50575c] rounded-full hover:bg-[#2c2f30]">
             Download CV
           </button>
         </div>
