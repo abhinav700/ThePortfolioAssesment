@@ -12,7 +12,7 @@ const SkillComponent = ({ skill }: any) => {
         height={100}
         width={100}
       />
-      <p className="text-white mt-4 mx-auto h-[170px] mb-5">
+      <p className="text-black mt-4 mx-auto h-[170px] mb-5">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio pariatur
         perspiciatis, veritatis recusandae eos iusto illo adipisca repudiandae
         iure sed?
