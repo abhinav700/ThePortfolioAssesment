@@ -2,7 +2,6 @@ import React from "react";
 import Project from "./Project";
 
 const ProjectSection = ({ projects }: any) => {
-  console.log(projects);
   projects.sort((a:any, b:any) => a.sequence - b.sequence);
 
   const mappedArray = projects.map((item: any) => {
