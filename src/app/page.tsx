@@ -8,6 +8,7 @@ import AboutMe from "@/components/AboutMe/AboutMe";
 import SkillsSection from "@/components/SkillsSection/SkillsSection";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
+import ResumeSection from "@/components/ResumeSection/ResumeSection";
 const Home = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, []);
-  console.log(data);
+  // console.log(data);
     return (
     <>
       {!loading ? (
@@ -35,6 +36,7 @@ const Home = () => {
             <HeroSection about={data!.user!.about} />
             <AboutMe about={data!.user!.about} socialHandles = {data!.user.social_handles}/>
             <ServicesSection servicesData = {data!.user!.services}/>
+            <ResumeSection resumeData = {data!.user!.timeline}/>
             <SkillsSection skills = {data!.user!.skills}/>
             <ProjectSection projects = {data!.user!.projects}/>
           </div>
