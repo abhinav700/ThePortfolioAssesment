@@ -26,9 +26,9 @@ function Project({ data }: any) {
         </div>
       </div>
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{data.title}</div>
+        <div className="text-black font-bold text-xl mb-2">{data.title}</div>
         <p className="text-gray-700 text-base">{data.techStack}</p>
-        <p>{data.description} </p>
+        <p className="text-black">{data.description} </p>
       </div>
     </div>
   );
