@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaBriefcase as WorkIcon } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import Button from "react-bootstrap/Button";
+import { IoIosSchool } from "react-icons/io";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -71,7 +73,7 @@ const ResumeSection = ({ resumeData }: any) => {
                   borderRight: "7px solid  rgb(33, 150, 243)",
                 }}
                 iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={<WorkIcon />}
+                icon={<IoIosSchool />}
               >
                 <h3 className="vertical-timeline-element-title">
                   {item.company_name}
