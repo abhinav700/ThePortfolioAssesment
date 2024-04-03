@@ -9,6 +9,7 @@ import SkillsSection from "@/components/SkillsSection/SkillsSection";
 import ProjectSection from "@/components/ProjectSection/ProjectSection";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import ResumeSection from "@/components/ResumeSection/ResumeSection";
+import TestimonialSection from "@/components/TestimonialSection/TestimonialSection";
 const Home = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,7 @@ const Home = () => {
   useEffect(() => {
     loadData();
   }, []);
-  // console.log(data);
+  // console.log(data);  
     return (
     <>
       {!loading ? (
@@ -39,6 +40,7 @@ const Home = () => {
             <ResumeSection resumeData = {data!.user!.timeline}/>
             <SkillsSection skills = {data!.user!.skills}/>
             <ProjectSection projects = {data!.user!.projects}/>
+            <TestimonialSection testimonials = {data!.user!.testimonials}/>
           </div>
         </main>
       ) : (
