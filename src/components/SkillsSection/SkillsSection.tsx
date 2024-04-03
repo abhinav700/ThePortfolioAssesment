@@ -8,7 +8,7 @@ const SkillsSection = ({ skills }: any) => {
 
   return (
     <>
-      <h1 className="sm:text-3xl md:text-5xl text-center w-full my-12 font-bold text-black  font-serif">
+      <h1 id="skills" className="sm:text-3xl md:text-5xl text-center w-full my-12 font-bold text-black  font-serif">
         MY PROFESSIONAL SKILLS
       </h1>
 

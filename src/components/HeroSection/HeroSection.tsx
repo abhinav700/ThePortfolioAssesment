@@ -10,7 +10,7 @@ const HeroSection = ({ about }: any) => {
   const [avatar, setAvatar] = useState(about?.avatar);
   const [title, setTitle] = useState(about.title);
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-12">
+    <section id="home" className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
         <h1 className="sm:text-4xl xs-[100px] md:text-6xl  sm:mx-auto md:h-[150px] h-[50px]">
           Hello, I am{" "}

@@ -60,7 +60,7 @@ const AboutMe = ({ about, socialHandles }: any) => {
     setShowContactMe(true)
   };
   return (
-    <section className="text-white mt-12">
+    <section id="about" className="text-white mt-12">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src={alternateAvatar} className="lg:w-[400px] lg:h-[500px]" height={350} width={250} alt="" />
         <div>

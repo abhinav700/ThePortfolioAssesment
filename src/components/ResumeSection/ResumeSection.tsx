@@ -39,7 +39,7 @@ const ResumeSection = ({ resumeData }: any) => {
   experienceData.sort((a: any, b: any) => a.sequence - b.sequence);
 
   return (
-    <div className="w-full my-[100px]">
+    <div id="resume" className="w-full my-[100px]">
       <h1 className="sm:text-3xl md:text-5xl text-center w-full my-12 font-bold text-black font-serif">
         RESUME
       </h1>

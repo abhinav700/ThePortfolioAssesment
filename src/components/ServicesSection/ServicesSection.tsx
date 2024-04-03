@@ -25,7 +25,7 @@ const ServicesSection = ({ servicesData }: any) => {
     );
   });
   return (
-    <div className="my-7 ">
+    <div id="services" className="my-7 ">
       <h1 className="text-3xl md:text-5xl text-center my-12 font-bold text-black font-serif">
         SERVICES PROVIDED
       </h1>
