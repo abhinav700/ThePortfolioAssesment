@@ -16,9 +16,9 @@ const ServicesSection = ({ servicesData }: any) => {
             />
           </div>
           <div className="bg-black w-full text-white p-4 ">
-              <h1 className="lg:my-3 whitespace-normal">{item.name}</h1>
-              <h4 className="my-3 break-words">{item.desc}</h4>
-              <div className="flex flex-wrap items-center"><h4 className="my-3 mr-3">Starting Price: </h4> <h3 className="my-3">{item.charge}</h3></div>
+              <h1 className="text-4xl lg:my-3 whitespace-normal">{item.name}</h1>
+              <h4 className="text-xl my-3 break-words">{item.desc}</h4>
+              <div className="flex flex-wrap items-center"><h4 className="text-xl my-3 mr-3">Starting Price: </h4> <h3 className="font-bold my-3">{item.charge}</h3></div>
           </div>
         </div>
       </Carousel.Item>
