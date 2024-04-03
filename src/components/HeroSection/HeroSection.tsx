@@ -12,7 +12,7 @@ const HeroSection = ({ about }: any) => {
   return (
     <section id="home" className="grid grid-cols-1 lg:grid-cols-12">
       <div className="col-span-7">
-        <h1 className="sm:text-4xl xs-[100px] md:text-6xl  sm:mx-auto md:h-[150px] h-[50px]">
+        <h1 className="text-black sm:text-4xl xs-[100px] md:text-6xl  sm:mx-auto md:h-[150px] h-[50px]">
           Hello, I am{" "}
           <span className="text-[#6b96b0]">
             <TypeAnimation
