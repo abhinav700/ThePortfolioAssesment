@@ -8,7 +8,7 @@ const ProjectSection = ({ projects }: any) => {
     return <Project key = {item._id} data = {item}/>;
   });
   return (
-    <div id="projects" className="w-full">
+    <div id="projects" className="text-black w-full">
       <h1 className="my-7 text-5xl w-full text-center">MY PROJECTS</h1>
       <div className=" w-full flex flex-row flex-wrap justify-center items-center ">{mappedArray}</div>
     </div>

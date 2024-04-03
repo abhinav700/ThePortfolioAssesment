@@ -61,7 +61,7 @@ const ResumeSection = ({ resumeData }: any) => {
       </div>
       {showEducation && (
         <div className="w-[350px] sm:w-[700px] md:w-[900px] mx-auto" ref={ref}>
-          <h1 className="w-full">Education</h1>
+          <h1 className="w-full text-black text-5xl">Education</h1>
           <VerticalTimeline layout="1-column-left">
             {educationData.map((item: any, index: number) => (
               <VerticalTimelineElement
@@ -105,7 +105,7 @@ const ResumeSection = ({ resumeData }: any) => {
 
       {showExperience && (
         <div className="w-[350px] sm:w-[700px] md:w-[900px] mx-auto" ref={ref}>
-        <h1 className="w-full">Experience</h1>
+        <h1 className="w-full text-black text-5xl">Experience</h1>
           <VerticalTimeline layout="1-column-left">
             {experienceData.map((item: any, index: number) => (
               <VerticalTimelineElement
